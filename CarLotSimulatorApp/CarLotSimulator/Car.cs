@@ -6,57 +6,44 @@ namespace CarLotSimulator
 {
    public class Car
     {
-        public int Year(int date)
-        {
-            date = 2020;
-        }
-        public int date { get; set; }
+        public int Year { get; set; }
        
-        public string Make(string make)
-        {
-            make = "Chevorlet";
-        }
-        public string make { get; set; }
+        public string Make { get; set; }
 
-        public string Model(string model)
-        {
-            model = "Bronco";
-        }
-        public string model { get; set; }
+        public string Model { get; set; }
 
-        public string EngineNoise(string rumble)
-        {
-            rumble = "Boom";
-        }
-        public string rumble { get; set; }
+        public string EngineNoise { get; set; }
 
-        public string HonkNoise(string honk)
-        {
-            honk = "loud";
-        }
-        public string honk { get; set; }
+        public string HonkNoise { get; set; }
+       
+        public bool IsDriveable { get; set; }
 
-        public bool IsDriveable(bool drive)
+        public void MakeEngineNoise(string engineNoise)
         {
-            drive = true;
-        }
-        public bool drive { get; set; }
-
-        public void MakeEngineNoise()
-        {
-            //rumble
+            Console.WriteLine("The engine goes VROOM, VROOM");        
         }
 
-        public void MakeHonkNoise()
+        public void MakeHonkNoise(string honkNoise)
         {
-            //honk
+            Console.WriteLine("The horn sounds like a clown car");          
         }
 
-        //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
-        //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
-        //The methods should take one string parameter: the respective noise property
-        //Now that the Car class is created we can instanciate 3 new cars
-        //Set the properties for each of the cars
-        //Call each of the methods for each car
+        public Car()
+        {
+
+        }
+
+        public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)
+        {
+            Year = year;
+            Make = make;
+            Model = model;
+            EngineNoise = engineNoise;
+            HonkNoise = honkNoise;
+            IsDriveable = isDriveable;
+
+        }
+        
     }
+   
 }
