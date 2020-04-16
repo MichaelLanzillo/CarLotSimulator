@@ -6,26 +6,21 @@ namespace CarLotSimulator
 {
    public class Car
     {
-        public int Year { get; set; }
-       
+        public int Year { get; set; }       
         public string Make { get; set; }
-
         public string Model { get; set; }
-
         public string EngineNoise { get; set; }
-
-        public string HonkNoise { get; set; }
-       
+        public string HonkNoise { get; set; }       
         public bool IsDriveable { get; set; }           //= true/false;
 
         public void MakeEngineNoise(string engineNoise)
         {
-            Console.WriteLine("The engine goes VROOM, VROOM");        
+            Console.WriteLine(engineNoise);        
         }
 
         public void MakeHonkNoise(string honkNoise)             //check video
         {
-            Console.WriteLine("The horn sounds like a clown car");          
+            Console.WriteLine(honkNoise);          
         }
 
         public Car()

@@ -30,21 +30,21 @@ namespace CarLotSimulator
             myFirstCar.HonkNoise = "BEEP BEEP";
             myFirstCar.IsDriveable = true;
 
-            myFirstCar.MakeEngineNoise();
-            myFirstCar.MakeHonkNoise();
+            myFirstCar.MakeEngineNoise(myFirstCar.EngineNoise);
+            myFirstCar.MakeHonkNoise(myFirstCar.HonkNoise);
 
             
             Car mySecondCar = new Car() { Year = 2003, Make = "Hyundai", Model = "Elantra", EngineNoise = "Pur Pur", HonkNoise = "Beepidy Beepidy", IsDriveable = true };
             lot.CarList.Add(mySecondCar);
 
-            mySecondCar.MakeEngineNoise();
-            mySecondCar.MakeHonkNoise();
+            mySecondCar.MakeEngineNoise(mySecondCar.EngineNoise);
+            mySecondCar.MakeHonkNoise(mySecondCar.HonkNoise);
 
-            Car myThirdCar = new Car(); //inside paramater, just put values you want i.e. (2020, Lamburgini, etc.)
+            Car myThirdCar = new Car(2020, "Lexus", "LS 430", "VVVROOOOM", "Move b*&#^s", true); //inside paramater, just put values you want i.e. (2020, Lamburgini, etc.)
             lot.CarList.Add(myThirdCar);
 
-            myThirdCar.MakeEngineNoise();
-            myThirdCar.MakeHonkNoise();
+            myThirdCar.MakeEngineNoise(myThirdCar.EngineNoise);
+            myThirdCar.MakeHonkNoise(myThirdCar.HonkNoise);
 
             //*************BONUS*************//
 
@@ -54,7 +54,7 @@ namespace CarLotSimulator
             foreach(var car in lot.CarList)                     //review video for any questions
             {
                 Console.WriteLine();
-                Console.WriteLine($"Year {car.Year} Make {car.Make} Model {car.Model}");
+                Console.WriteLine($"Year: {car.Year} Make: {car.Make} Model: {car.Model}");
             }
             //Create a CarLot class
             //It should have at least one property: a List of cars
